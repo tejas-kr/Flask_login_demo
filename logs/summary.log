@@ -1,0 +1,5 @@
+[09-24 13:31:56] p536 {C:\Users\djang\code\python\flask\login_app_demo\show_data.py:12} ERROR - data1.html
+[09-24 13:32:28] p15684 {C:\Users\djang\code\python\flask\login_app_demo\show_data.py:12} ERROR - data1.html
+[09-24 13:33:01] p9788 {C:\Users\djang\code\python\flask\login_app_demo\show_data.py:12} ERROR - data1.html
+[09-24 13:33:29] p3880 {C:\Users\djang\code\python\flask\login_app_demo\show_data.py:12} ERROR - TemplateNotFound
+[09-24 13:34:04] p7212 {C:\Users\djang\code\python\flask\login_app_demo\show_data.py:12} ERROR - TemplateNotFound
