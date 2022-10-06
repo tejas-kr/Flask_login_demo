@@ -3,6 +3,7 @@ from flask import Flask, Blueprint
 import logging
 
 from show_data import show_data
+from authentication import authentication
 
 app = Flask(__name__)
 app.secret_key = b'd177d7d81402930afec6d60b960426b87ccd0727b11942a515239ec9a09fac34'
@@ -27,6 +28,7 @@ app.logger.addHandler(streamHandler)
 # login_manager.init_app(app)
 
 app.register_blueprint(show_data)
+app.register_blueprint(authentication)
 
 @app.route('/')
 def index():
