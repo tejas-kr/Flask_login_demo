@@ -2,6 +2,36 @@
 
 {% block content %}
 
-    <h1>Hellow Worlds</h1>
+    <h1>World Population Data ~ </h1>
+
+    <div class="row align-items-center">
+        <div class="col">
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        {% for title in context.rows[0] %}
+                            <th scope="col">{{ title }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in context.rows[1:] %}
+                    <tr>
+                        {% for r in row %}
+                        <td {{ 'scope="col"' if (r[0].index==0)  else '' }} >{{ r }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+
+    <!-- {% for row in context.rows %}
+        <p>{{ row[1] }}</p>
+    {% endfor %} -->
 
 {% endblock %}
