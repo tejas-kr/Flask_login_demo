@@ -27,12 +27,13 @@ def get_data_as_dict(query, *args):
 
     cur.execute(query=query, vars=args)
     
-    fetched_data = cur.fetchall()
+    result = cur.fetchall()
+    count = cur.rowcount
 
     cur.close()
     conn.close()
     
-    return fetched_data
+    return count, result
 
 def insert_data(query, *args):
     conn = get_db_conn()
@@ -41,9 +42,10 @@ def insert_data(query, *args):
     cur.execute(query, (args))
 
     count = cur.rowcount
+    result = cur.fetchone()
     
     cur.close()
     conn.close()
 
-    return count
+    return count, result
     
