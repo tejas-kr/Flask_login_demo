@@ -1,4 +1,4 @@
-from flask import Blueprint, request, render_template, session, redirect, url_for
+from flask import Blueprint, request, render_template, session, redirect, url_for, current_app
 
 from flask_wtf import FlaskForm
 from wtforms import StringField, EmailField, PasswordField
@@ -76,6 +76,7 @@ def login():
             session['username'] = result[0][2]
             return redirect(url_for('show_data.data'))
         else: 
+            current_app.logger.error("Wrong username or password")
             return "Wrong username or password", 401
 
     if session.get('user_id') and session.get('user_uuid') and session.get('username'):

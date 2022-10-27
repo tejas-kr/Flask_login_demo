@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, abort, jsonify, current_app
+from flask import Blueprint, render_template, abort, current_app
 from jinja2 import TemplateNotFound
 
 from .authentication import authentication_required
